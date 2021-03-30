@@ -22,7 +22,7 @@ def stocks():
 
 
         csv_stocks.close()
-
+        
 
 if __name__ == "__main__":
 	stocks()
