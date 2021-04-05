@@ -7,7 +7,7 @@ from openpyxl import Workbook
 workbook_name = 'wsb_data.xlsx'
 
 titles = ["DD", "Discussion", "YOLO", "News", "Earningsthread"]
-headers = ["Date", "ID", "Comment"]
+headers = ["Date", "ID", "Comment", "Parent_ID"]
 wb = Workbook()
 
 #Creates a sheet title for each flair and gives it headers.
