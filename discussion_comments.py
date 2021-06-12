@@ -1,6 +1,5 @@
 #Imports
 import praw
-import requests
 import datetime
 import re
 from bs4 import BeautifulSoup
@@ -120,7 +119,9 @@ def discussion_processing():
             sentence[1] = re.sub(trimmer_re, "", sentence[1])
 
             #Append comment data unless empy string.
-            if sentence[1] != "":
+            if sentence[1] == "" or sentence[1] == '""':
+                continue
+            else:
                 processed_data.append(sentence)
 
         #Simply apply changes. 
@@ -128,22 +129,17 @@ def discussion_processing():
             sentence[1] = re.sub(generic_re, "", sentence[1])
             sentence[1] = re.sub(trimmer_re, "", sentence[1])
             
-            #Append comment data unless empy string.
-            if sentence[1] != "":
+            #Append comment data unless empy string.      
+            if sentence[1] == "" or sentence[1] == '""':
+                continue
+            else:
                 processed_data.append(sentence)
 
     return processed_data
-
-def run_datacollection():
-    """
-        Function to run rq.
-    """
-    resp = requests.discussion_data()
-    return resp
 
 #Run functions
 if __name__ == "__main__":
     access()
     discussion_data()
     discussion_processing()
-    #run_datacollection()
+
