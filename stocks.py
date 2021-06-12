@@ -1,8 +1,5 @@
-#stocks
-
 #Imports
 import csv
-import os
 
 
 def stocks():
