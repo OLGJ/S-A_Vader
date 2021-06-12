@@ -13,5 +13,7 @@ The result indicated that comments on Wallstreetbets regarding the most discusse
 
 
 ------------------------- Disclaimer -------------------------
+
+
 All data are not provided as this is a bachelor thesis. 
 If you wish to gain access, @me.
