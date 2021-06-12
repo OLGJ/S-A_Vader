@@ -1,7 +1,6 @@
 #Imports
 import csv
 
-
 def stocks():
 	"""
 	Filters all stocks with a pricing above or equal to 5$ from csv file retrieved 2021-03-29
@@ -22,7 +21,6 @@ def stocks():
 
 
         csv_stocks.close()
-
 
 if __name__ == "__main__":
 	stocks()
